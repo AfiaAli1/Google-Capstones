@@ -1,0 +1,57 @@
+Divvy bikeshare data cleaning log
+
+1.	First download documents for one year 
+
+2.	Q1 2020 data cleaning 
+
+-	Delete columns such as ride_id
+-	Day of the week calculation – convert to number
+-	AVG ride_length calculation – convert to number
+-	Copy and paste special values
+
+-	Deleted columns I will not be using including start_at, ended_at, start_lat, start_lng, end_lat, end_lng
+
+-	Change member_casual column name to member_type
+
+-	Add filter and delete ride length where values are hashtags or 00:00:00
+
+-	Use filter to ensure there are only two member types
+
+-	Check day_of_week to ensure ranges only from 1-7
+
+3.	2019_Q4 data cleaning 
+
+-	Day of the week calculation – convert to number
+-	AVG ride_length calculation – convert to number
+-	Copy and paste special values
+
+-	Delete trip_id, tripduration, Start time_end time, ride_length 
+-	Delete Gender and birth year- many missing fields
+-	Change ‘usertype’ to ‘member_type’ to ensure data is uniformed
+-	Change ’subscriber’ to ‘member’ and ‘customer’ to ‘casual’ 
+
+-	Delete hashtag values for ride length 
+
+-	Filter and check for two types of members and day_of_week check 
+
+4.	2019_Q3
+-	Day of the week calculation – convert to number
+-	AVG ride_length calculation – convert to number
+-	Copy and paste special values
+
+-	Delete trip_id, gender, birthyear, start_time, End_time, tripduration
+
+-	Change ‘Usertype’ to ‘member_type’
+
+-	Change ‘Customer’ to ‘casual’ and  ‘Subscriber’ to ‘member’
+
+5.	2019 Q2 data cleaning
+-	Day of the week calculation – convert to number
+-	AVG ride_length calculation – convert to number
+-	Copy and paste special values
+ 
+-	Delete rental_id, member gender, member details, member birthday year, rental detail duration
+
+-	Rename columns to standardise data
+-	Change ‘Subscriber’ to ‘member’ and ‘Customer’ to ‘casual’ 
+-	Delete ride length where 00:00:00 and hashtags
