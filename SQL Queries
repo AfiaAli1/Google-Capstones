@@ -1,0 +1,397 @@
+ 2020 Q1 DATA
+
+Total riders: 
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+
+Total number of casual riders:
+
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE
+  member_type = 'casual'
+
+
+Total number of members:
+
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE
+  member_type = 'member'
+
+
+AVG ride length of casual riders:
+
+SELECT 
+  AVG(ride_length) as avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE 
+  member_type = 'casual'
+
+
+AVG ride length of members:
+SELECT 
+  AVG(ride_length) as avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE 
+  member_type = 'member'
+
+
+Total member users per day of the week: 
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE 
+  member_type = 'member'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+Total casual users per day of the week: 
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE 
+  member_type = 'casual'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+AVG ride length by casual members per day of the week: 
+SELECT 
+  day_of_week, AVG(ride_length) as avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2020_Q1` 
+WHERE 
+  member_type = 'casual'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+ 
+2019 Q4 DATA
+Total users: 
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+
+
+Total number of casual riders: 
+
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = ‘casual’
+
+
+Total number of member riders: 
+
+SELECT 
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = 'member'
+
+
+AVG ride length by members:
+
+SELECT 
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = 'member'
+
+
+AVG ride length by casual riders: 
+SELECT 
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = ‘casual’
+
+
+AVG ride length by casual riders per day of the week:
+SELECT 
+  day_of_week, AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = 'casual'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+AVG ride length by members per day of the week:
+
+SELECT 
+  day_of_week, AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE
+  member_type = 'member'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+Total casual users per day of the week:
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE 
+  member_type = 'casual'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+Total member users per day of the week: 
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q4` 
+WHERE 
+  member_type = 'member'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+ 
+2019 Q3 DATA
+Total users: 
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+
+
+Total users by casual riders: 
+
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = 'casual'
+
+
+Total users by members: 
+
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = 'member'
+
+
+AVG ride length by members: 
+
+SELECT  
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = 'member'
+
+
+AVG ride length by casual riders: 
+
+SELECT  
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = ‘casual’
+
+
+AVG ride length by causal riders per day of the week: 
+
+SELECT  
+  day_of_week, AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = 'casual'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+
+AVG ride length by members per day of the week: 
+
+SELECT  
+  day_of_week, AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE
+  member_type = 'member'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+Total member users per day of the week:
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE 
+  member_type = 'member'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+Total casual users per day of the week: 
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q3` 
+WHERE 
+  member_type = 'casual'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+2019 Q2 DATA
+
+Total users: 
+
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+
+
+Total casual riders: 
+
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='casual'
+
+
+Total member users: 
+SELECT  
+  COUNT(*)
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='member'
+
+
+AVG ride length by members: 
+
+SELECT  
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='member'
+
+
+AVG ride length by casual users: 
+
+SELECT  
+  AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='casual'
+
+
+AVG ride length by casual users per day of the week: 
+SELECT  
+  day_of_week,AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='casual'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+
+AVG ride length by members per day of the week: 
+
+SELECT  
+  day_of_week,AVG(ride_length) AS avg_ride_length
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type ='member'
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week
+
+
+Total casual users per day of the week: 
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type = 'casual'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
+
+
+Total member users per day of the week: 
+
+SELECT 
+  day_of_week, COUNT(*) AS total_users
+FROM 
+  `big-query-sandbox-362620.Cyclisitic_trip_data.trips_2019_Q2` 
+WHERE 
+  member_type = 'member'
+GROUP BY 
+  day_of_week
+ORDER BY 
+  day_of_week
